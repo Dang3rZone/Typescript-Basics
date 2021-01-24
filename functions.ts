@@ -22,12 +22,20 @@ const throwError = (message: string): never => {
   throw new Error(message);
 };
 
-const forecast = {
+const todaysWeather = {
   date: new Date(),
   weather: 'sunny',
 };
 
-const logWeather = (forecast: { date: Date; weather: string }): void => {
-  console.log(forecast.weather);
-  console.log(forecast.date);
+const logWeather = ({
+  date,
+  weather,
+}: {
+  date: Date;
+  weather: string;
+}): void => {
+  console.log(weather);
+  console.log(date);
 };
+
+logWeather(todaysWeather);
